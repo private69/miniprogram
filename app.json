@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/stores/stores",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小程序首页",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#ccc",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "",
+    "position": "top",
+    "list":[
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home"
+      },
+      {
+        "text": "好房",
+        "pagePath": "pages/stores/stores"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

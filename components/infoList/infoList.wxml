@@ -1,0 +1,38 @@
+<view class="infoList">
+    <slot name="header"></slot>
+    <view style="clear:both;"></view>
+    <view 
+    class="infoList-item" 
+    wx:for="{{infolist}}" 
+    wx:key="index" 
+    bindtap="reach" 
+    data-path="{{item.path}}">
+        <view class="left">
+            <image src="{{item.src}}" />
+        </view>
+        <view class="right">
+            <view class="infoList-item__title">
+                {{item.title || '---'}}
+            </view>
+            <view class="infoList-item__time">
+                开始时间：
+                {{ item.frontTime + '~' + item.endTime }}
+            </view>
+            <view class="infoList-item__tags">
+                <view 
+                class="tag" 
+                wx:for="{{item.tags}}" 
+                wx:for-item="v" 
+                wx:key="*this"
+                >{{v}}</view>
+            </view>
+            <view class="infoList-item__price">
+                <view class="left">
+                    <text style="font-size: 38rpx;">{{ item.prices }}</text>
+                    万
+                </view>
+                <view class="right">{{ item.looked + '人看过' }}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="cpm-rotation__text">
+    <swiper 
+    autoplay="{{true}}"
+    circular="{{true}}"
+    interval="3000"
+    >
+        <swiper-item class="rotation-swiper">
+            <view bindtap="func" class="rotation-block" wx:for="{{dataList}}" wx:key="e" wx:for-item="i" wx:for-index="e">
+                <view class="rotation-item">
+                    <image class="rotation-image" src="{{i.src}}" lazy-load/>
+                </view>
+                <text class="rotation-content">{{i.text}}</text>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

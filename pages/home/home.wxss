@@ -1,0 +1,41 @@
+/* pages/home/home.wxss */
+.home-main {
+    padding: 30rpx;
+}
+.home-input {
+    width: 660rpx;
+    /* height: 10vh; */
+    padding: 5rpx 0 5rpx 20rpx;
+    border: 1px solid #ccc;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+}
+
+.home-rotation_plot {
+    margin: 30rpx 0;
+    width: 690rpx;
+    /* height: 40vh; */
+    /* background-color: #333; */
+    border: 1rpx solid #999;
+}
+
+.home-rotation_plot image {
+    width: 690rpx;
+    overflow: hidden;
+}
+.home-side_bar {}
+.home-cpm_list .header {
+    font-size: 30rpx;
+}
+.home-cpm_list .header>.left {
+    float: left;
+}
+.home-cpm_list .header>.right {
+    float: right;
+}
+.home-cpm_list .header::after {
+    content: "";
+    width: 100%;
+    height: 0rpx;
+    clear: both;
+}

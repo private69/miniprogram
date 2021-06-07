@@ -1,0 +1,33 @@
+	<view class="login">
+		<view class="login-message">
+			您还没授权，请先授权！
+		</view>
+		<view 
+        class="login-btn__authorize">
+			<button 
+            class="login-authorize" 
+            size="mini" 
+            open-type="getPhoneNumber" 
+            bindgetphonenumber="bindGetPhoneNumber">
+				获取手机号码
+			</button>
+		</view>
+		<view>
+			<button 
+            class="login-authorize" 
+            size="mini" 
+            open-type="getUserInfo" 
+            bindgetuserinfo="getUser">
+				获取权限
+			</button>
+		</view>
+		<view>
+			<button 
+            class="login-authorize" 
+            size="mini" 
+            bindtap="getAuthorize" 
+            data-scope="userLocation">
+				授权
+			</button>
+		</view>
+	</view>

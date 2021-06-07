@@ -1,0 +1,52 @@
+.infoList-item {
+    display: flex;
+    padding: 30rpx 0;
+    border-bottom: 2rpx solid #ddd;
+}
+.infoList-item>.left {
+    width: 200rpx;
+    height: 180rpx;
+    border: 1rpx solid #666;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+.infoList-item>.right {
+    width: 460rpx;
+    font-size: 34rpx;
+}
+.infoList-item .right .infoList-item__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40rpx;
+}
+.infoList-item .right .infoList-item__time{
+    font-size: 22rpx;
+    height: 12rpx;
+    margin: 6rpx 0;
+}
+.infoList-item .right .infoList-item__tags {
+    height: 40rpx;
+    margin-top: 10rpx;
+}
+.infoList-item .right .infoList-item__tags .tag{
+    display: inline-block;
+    border-radius: 10rpx;
+    padding: 5rpx 26rpx;
+    font-size: 22rpx;
+    background-color: #e0c592;
+    margin-right: 10rpx;
+}
+.infoList-item .right .infoList-item__price {
+    padding-top: 20rpx;
+}
+.infoList-item .right .infoList-item__price>.left {
+    float: left;
+    font-size: 30rpx;
+    color: #817154;
+}
+.infoList-item .right .infoList-item__price>.right {
+    float: right;
+    font-size: 28rpx;
+    opacity: 0.6;
+}

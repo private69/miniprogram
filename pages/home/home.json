@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "rotationText": "../../components/rotationText/rotationText",
+    "infoList": "../../components/infoList/infoList"
+  },
+  "navigationBarTitleText": "首页",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

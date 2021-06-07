@@ -1,0 +1,32 @@
+<view class="home-main">
+    <view class="home-input">
+        <input value="{{search}}" placeholder="我想找房..." />
+    </view>
+    <view class="home-rotation_plot">
+        <swiper 
+        autoplay="{{true}}" 
+        circular="{{true}}" 
+        interval="3000">
+            <swiper-item wx:for="{{picList}}" wx:key="*this">
+                <image 
+                src="{{item}}" 
+                lazy-load="true" 
+                mode="{{'heightFix'}}" />
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="home-side_bar">功能显示</view>
+    <view style="height: 200rpx;">
+        <!-- 添加组件 -->
+        <rotationText list="{{rotationText}}"></rotationText>
+    </view>
+    <!-- <view class="" bindtap="fff" data-index="0">cai</view> -->
+    <view class="home-cpm_list">
+        <infoList infolist="{{infolist}}">
+            <view class="header" slot="header">
+                <view class="left">法拍房源</view>
+                <view class="right">全部房源 ></view>
+            </view>
+        </infoList>
+    </view>
+</view>
