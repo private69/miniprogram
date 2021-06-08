@@ -1,4 +1,9 @@
+/* btn_group */
 .btn_group {
-    color: #454545;
-    border: 2rpx solid #333;
+    text-align: center;
+}
+.btn_group .btn-group__button{
+    color: green;
+    font-weight: bold;
+    padding: 0rpx 20rpx;
 }

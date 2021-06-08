@@ -1,13 +1,16 @@
 <template name="btn_group">
 	<view class="btn_group">
-		<text class="" selectable="true">
-            {{ 'height ' + height }}
-        </text>
-		<button size="mini">
-            {{ name }}
+		<button 
+        size="mini" 
+        class="btn-group__button"
+        >
+            {{ btnLeft }}
         </button>
-		<text class="" selectable="true">
-		    {{ 'weight ' + weight }}
-		</text>
+		<button 
+        size="mini" 
+        class="btn-group__button"
+        >
+            {{ btnRight }}
+        </button>
 	</view>
 </template>

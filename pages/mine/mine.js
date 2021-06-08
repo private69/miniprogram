@@ -6,9 +6,8 @@ Page({
    */
   data: {
     temData: {
-      name: "zhangsan",
-      weight: "120",
-      height: "170"
+      btnLeft: "btn-left",
+      btnRight: "btn-right",
     }
   },
 
