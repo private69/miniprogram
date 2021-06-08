@@ -5,6 +5,8 @@ exports.func = () => {
 exports.getUserInfo = () => {
     return new Promise((resolve, reject) => {
         wx.getUserInfo({
+            withCredentials: true,
+            lang: "en",
             success: (res) => { resolve(res); },
             fail: (res) => { reject(res); }
         })

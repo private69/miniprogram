@@ -41,6 +41,7 @@ Page({
         }
       })
     }).catch( err => {
+      console.log(err);
       self.showToast("请重新获取权限！")
     })
   },
@@ -52,13 +53,6 @@ Page({
       duration: 2000
     });
     // 关闭弹窗
-    // setTimeout(() => {
-    //   wx.hideToast({
-    //     complete: (res) => {
-    //       console.log("2000");
-    //     },
-    //   })
-    // }, 2000);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -70,6 +64,11 @@ Page({
    */
   onReady: function () {
     // this.getUser();
+    wx.login({
+      complete: (res) => {
+        console.log(res.code)
+      },
+    })
   },
   /**
    * 生命周期函数--监听页面显示
@@ -78,7 +77,7 @@ Page({
     // 检测是否授权
     getSetting().then(res => {
       const { authSetting } = res;
-      console.log(res);
+      console.log(authSetting);
     })
   },
   /**
