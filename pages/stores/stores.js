@@ -1,11 +1,10 @@
 // pages/stores/stores.js
-var { getUserInfo, getAuthorize, getSetting } = require("../../utils/service/common");
 const app = getApp();
 Page({
   /**
    * 页面的初始数据
    */
-  data: { },
+  data: {},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -16,7 +15,7 @@ Page({
    */
   onReady: function () {
     let usermsg = app.globalData.userMessage;
-    if(!usermsg){
+    if (!usermsg) {
       wx.redirectTo({
         url: "../login/login",
       })
@@ -25,7 +24,18 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () { },
+  onShow: function () {
+    // if(app.globalData.userMessage){
+    let user = wx.getStorageSync('user')
+    if (user) {
+      console.log();
+      wx.showToast({
+        title: '已授权',
+        icon: 'success',
+        duration: 2000
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

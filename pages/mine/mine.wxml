@@ -1,3 +1,4 @@
-<view>
-this is tabbar call mine
+<import src="../../template/btnGroup/btn_group.wxml"></import>
+<view class="mine">
+	<template is="btn_group" data="{{...temData}}"/>
 </view>

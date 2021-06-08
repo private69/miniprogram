@@ -1,0 +1,4 @@
+.btn_group {
+    color: #454545;
+    border: 2rpx solid #333;
+}

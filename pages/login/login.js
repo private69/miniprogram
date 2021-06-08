@@ -29,6 +29,7 @@ Page({
     let self = this;
     getUserInfo().then(res => {
       app.globalData.userMessage = res.userInfo;
+      wx.setStorageSync('user', res.userInfo);
       self.showToast('授权成功');
       wx.switchTab({
         url: '../stores/stores',
@@ -51,13 +52,13 @@ Page({
       duration: 2000
     });
     // 关闭弹窗
-    setTimeout(() => {
-      wx.hideToast({
-        complete: (res) => {
-          console.log("2000");
-        },
-      })
-    }, 2000);
+    // setTimeout(() => {
+    //   wx.hideToast({
+    //     complete: (res) => {
+    //       console.log("2000");
+    //     },
+    //   })
+    // }, 2000);
   },
   /**
    * 生命周期函数--监听页面加载
