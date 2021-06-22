@@ -46,15 +46,31 @@ Page({
         title: "这是标题2",
         frontTime: "2022-06-10",
         endTime: "2022-08-08",
-        tags: ['变卖' , "6.3折"],
+        tags: ['变卖', "6.3折"],
         prices: 33,
         looked: 4197,
         path: "../../pages/mine/mine"
       },
     ]
   },
-  fff: function(e){
+  fff: function (e) {
     console.log("aaaa");
+  },
+  inputFocus() {
+    console.log("aa");
+
+  },
+  inputBlur(event) {
+    console.log(event);
+    let data = event.detail.value;
+    wx.request({
+      url: 'www.baidu.com',
+      data,
+      method: 'GET',
+      fail(err) {
+        console.log(err);
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -74,7 +90,7 @@ Page({
    * 监听用户上拉触底事件
    * @param {*} e 
    */
-  onReachBottom: function(e){
+  onReachBottom: function (e) {
     console.log("已经到底了！");
     let list = this.data.infolist;
     let getone = list.slice(0, 2);

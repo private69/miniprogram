@@ -1,6 +1,6 @@
 <view class="home-main">
     <view class="home-input">
-        <input value="{{search}}" placeholder="我想找房..." />
+        <input value="{{search}}" placeholder="我想找房..." bindtap="inputFocus" bindblur="inputBlur"/>
     </view>
     <view class="home-rotation_plot">
         <swiper 
